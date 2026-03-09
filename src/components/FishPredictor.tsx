@@ -53,18 +53,21 @@ export default function FiskeSiden() {
     const analyserSituasjonen = async () => {
         setLaster(true);
         try {
-            const response = await fetch("http://localhost:8000/predict", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    maaned: maaned,
-                    dyp_meter: dyp,
-                    vekt_kg: vekt,
-                    omraade: omraade,
-                    sluk: sluk,
-                    fisk_type: fiskType,
-                }),
-            });
+            const response = await fetch(
+                `${process.env.NEXT_PUBLIC_API_URL}/predict`,
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        maaned: maaned,
+                        dyp_meter: dyp,
+                        vekt_kg: vekt,
+                        omraade: omraade,
+                        sluk: sluk,
+                        fisk_type: fiskType,
+                    }),
+                },
+            );
 
             if (!response.ok) throw new Error("API-feil");
 
