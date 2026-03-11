@@ -11,6 +11,9 @@ const FISKE_TYPER = [
     "Lyr",
     "Brosme",
     "Breiflabb",
+    "Pale",
+    "Flyndre",
+    "Uer",
 ];
 const MAANEDER = [
     { nr: 1, navn: "Januar" },
@@ -142,7 +145,7 @@ export default function FiskeSiden() {
                         </label>
                         <input
                             type='number'
-                            step='0.1'
+                            step='0.5'
                             value={vekt}
                             onChange={(e) => setVekt(Number(e.target.value))}
                             className='w-full border-2 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none'
@@ -178,6 +181,8 @@ export default function FiskeSiden() {
                             <option value='Lysefjorden'>Lysefjorden</option>
                             <option value='Blia'>Blia</option>
                             <option value='Frekhaug'>Frekhaug</option>
+                            <option value='Sotra'>Sotra</option>
+                            <option value='Askøy'>Askøy</option>
                         </select>
                     </div>
 
@@ -197,6 +202,8 @@ export default function FiskeSiden() {
                             <option value='Jigg'>Jigg</option>
                             <option value='Rema-sluk'>Rema-sluk</option>
                             <option value='Fireball'>Fireball</option>
+                            <option value='Wobbler'>Wobbler</option>
+                            <option value='Spinner'>Spinner</option>
                         </select>
                     </div>
                 </div>
