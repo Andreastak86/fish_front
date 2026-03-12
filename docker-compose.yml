@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        - NEXT_PUBLIC_API_URL=http://178.104.46.153:8000
+        - NEXT_PUBLIC_API_URL=http://178.104.46.153:8080
     container_name: fish_ai_frontend
     ports:
       - "3000:3000"
